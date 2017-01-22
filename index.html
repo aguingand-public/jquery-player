@@ -4,8 +4,20 @@
     <title>Soundcloud player</title>
     <meta charset="utf-8">
     <link href="materialize/css/materialize.min.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+
+    <script src="jquery-3.1.1.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+    <script src="soundcloud-api.js"></script>
+    <script>
+    $(function() {
+        $('.modal').modal();
+        $('#btnAide').click(function() {
+            $('#modal1').modal('open');
+        })
+    })
+    </script>
 </head>
 
 <body>
@@ -17,22 +29,15 @@
 
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h4>Demo Lecteur de musique jQuery</h4>
+                <h4>Aide</h4>
+                <h6 style="text-transform: uppercase">Fonctionnalités</h6>
+                <ul class="browser-default">
+                    <li><b>Liste de gauche :</b> Selectionner une musique</li>
+                    <li><b>Barre du bas :</b> Boutons d'actions Précédent, Lecture/Pause, Suivant</li>
+                    <li><b>Liste des paroles à droite : </b>Cliquez sur une ligne pour aller à cette partie de la chanson</li>
+                </ul>
                 <p>
-L'exercice de développement était de produire un lecteur web de musique basé sur SoundCloud.<br>
-Fonctionalités
-<ul>
-    <li>Selectionner une musique parmis la liste présente</li>
-    <li>Boutons d'actions Précédent, Lecture/Pause, Suivant</li>
-    <li>Liste des paroles
-        <ul>
-            <li>Une ligne est en gras lorsque la musique est synchronisé aux paroles</li>
-            <li>On peut cliquer sur une ligne pour naviguer au sein de la chanson</li>
-        </ul>
-    </li>
-</ul>
-<br>
-Les paroles sont issues d'un fichier de test et ne corresponde pas exactement à la musique.
+                    <b>P.S.</b> Les paroles ne sont pas exactement synchronisé (fichier issue d'une vidéo youtube)
                 </p>
             </div>
             <div class="modal-footer">
@@ -51,6 +56,9 @@ Les paroles sont issues d'un fichier de test et ne corresponde pas exactement à
                     <li><a class="player__btn-prev"><i class="material-icons">skip_previous</i></a></li>
                     <li><a class="player__btn-next"><i class="material-icons">skip_next</i></a></li>
                 </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a id="btnAide" class="waves-effect waves-light btn">Aide</a></li>
+                </ul>
             </div>
         </nav>
     </div>
@@ -59,9 +67,7 @@ Les paroles sont issues d'un fichier de test et ne corresponde pas exactement à
         <p class="lyrics__text"></p>
     </div>
 
-    <script src="jquery-3.1.1.js"></script>
-    <script src="materialize/js/materialize.min.js"></script>
-    <script src="soundcloud-api.js"></script>
+    
     <script src="script.js"></script>
 </body>
 

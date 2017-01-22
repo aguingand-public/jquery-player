@@ -132,7 +132,7 @@ widget.bind(SC.Widget.Events.PAUSE, function () {
     clearInterval(intervalId);
 });
 widget.bind(SC.Widget.Events.READY, function () {
-    widget.play();
+    updateSongs();
     $.ajax({
         url: 'https://raw.githubusercontent.com/iut-haguenau-dweb/repository-2016/master/tp/2/song.json',
         success: function (response) {
@@ -150,8 +150,3 @@ widget.bind(SC.Widget.Events.READY, function () {
         method: "GET"
     });
 });
-
-$(function() {
-    $('.modal').modal();
-    $('#modal1').modal('open');
-})
