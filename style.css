@@ -1,0 +1,28 @@
+iframe {
+    position:absolute;
+    top:-9999px;
+    left:-9999px;
+}
+.player {
+    width: 50%;
+    overflow: auto;
+    float:left;
+}
+.lyrics {
+    width: 50%;
+    float:right;
+}
+
+.lyrics a {
+    color: black;
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    bottom:0;
+}
+
+.player__songlist li{
+    cursor: default;
+}

@@ -1,0 +1,68 @@
+<html lang="fr">
+
+<head>
+    <title>Soundcloud player</title>
+    <meta charset="utf-8">
+    <link href="materialize/css/materialize.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="player">
+        <div>
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/249943607&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+            </iframe>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Demo Lecteur de musique jQuery</h4>
+                <p>
+L'exercice de développement était de produire un lecteur web de musique basé sur SoundCloud.<br>
+Fonctionalités
+<ul>
+    <li>Selectionner une musique parmis la liste présente</li>
+    <li>Boutons d'actions Précédent, Lecture/Pause, Suivant</li>
+    <li>Liste des paroles
+        <ul>
+            <li>Une ligne est en gras lorsque la musique est synchronisé aux paroles</li>
+            <li>On peut cliquer sur une ligne pour naviguer au sein de la chanson</li>
+        </ul>
+    </li>
+</ul>
+<br>
+Les paroles sont issues d'un fichier de test et ne corresponde pas exactement à la musique.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+            </div>
+        </div>
+
+        <ul class="player__songlist collection">
+
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a class="player__lbl-song center"></a>
+                <ul class="player-nav left">
+                    <li><a class="player__btn-playpause"><i class="material-icons btn-playpause__icon">play_arrow</i></a></li>
+                    <li><a class="player__btn-prev"><i class="material-icons">skip_previous</i></a></li>
+                    <li><a class="player__btn-next"><i class="material-icons">skip_next</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="lyrics flow-text">
+        <p class="lyrics__text"></p>
+    </div>
+
+    <script src="jquery-3.1.1.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+    <script src="soundcloud-api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
